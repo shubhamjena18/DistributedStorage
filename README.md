@@ -48,10 +48,4 @@ mvn -q test-compile
 java -cp target/classes`;target/test-classes com.interview.storage.StorageSystemTest
 ```
 
-## Interview Talking Points
 
-1. Why chunking matters: large objects can be distributed, retried, repaired, and streamed independently.
-2. Why consistent hashing matters: adding or removing nodes remaps only part of the keyspace.
-3. Why quorum matters: the coordinator can tolerate node failures while protecting against partial writes.
-4. Why metadata is separate: object manifests need transactional semantics different from bulk chunk storage.
-5. How to scale to TB/PB: use erasure coding for cold data, multi-zone placement, background compaction, checksums, and repair queues.
